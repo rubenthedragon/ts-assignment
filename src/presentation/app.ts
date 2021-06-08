@@ -23,6 +23,12 @@ export class App {
       Object.entries({
         someImage: "./assets/images/some-image.png",
         someAnimation: "./assets/animations/some-animation.json",
+        apple: "./assets/images/Apple.png",
+        gridTile: "./assets/images/GridTile.png",
+        snakeBend: "./assets/images/SnakeBend.png",
+        snakeHead: "./assets/images/SnakeHead.png",
+        snakeStraight: "./assets/images/SnakeStraight.png",
+        snakeTail: "./assets/images/SnakeTail.png",
       })
     );
     const pixiAssetLoader = new AssetRepository(new PixiAssetProvider(pixiAssetPaths));
