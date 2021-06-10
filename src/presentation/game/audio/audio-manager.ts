@@ -34,4 +34,9 @@ export class AudioManager {
     if (!this._howlResources.has(query)) return;
     this._howlResources.get(query)?.mute();
   }
+
+  public loopSound(query: string): void {
+    if (!this._howlResources.has(query)) return;
+    this._howlResources.get(query)?.loop();
+  }
 }

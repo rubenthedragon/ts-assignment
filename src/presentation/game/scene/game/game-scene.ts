@@ -6,6 +6,7 @@ import { PixiAnimatedSprite } from "../../pixi/pixi-animated-sprite";
 import { Vector2 } from "../../../../logic/math/vector2";
 import { Grid } from "../../../../logic/playingField/grid";
 import { Constants } from "../../../../data/Constants";
+import { Stopwatch } from "../../../../logic/stopwatch";
 
 export class GameScene extends PixiScene {
 
@@ -15,26 +16,12 @@ export class GameScene extends PixiScene {
     super(manager);
     this.grid.CreateGrid(10,10); 
     this.draw(context);
+    const timer = Stopwatch();
+    context.audioManager.playSound("backgroundSound");
   }
 
   draw(context: Context) {
     this.drawBoard(context);
-    // const someImageTexture = context.pixiAssetLoader.getResource("someImage");
-
-    // const sprite = new PIXI.Sprite(someImageTexture.texture);
-    // sprite.position.set(context.appSize.x * 0.5, context.appSize.y * 0.4);
-    // sprite.anchor.set(0.5, 0.5);
-    // this.container.addChild(sprite);
-
-    // const apeAnimation = context.pixiAssetLoader.getResource("someAnimation");
-    
-    // const animatedRunner = new PixiAnimatedSprite("Run", apeAnimation);
-    // animatedRunner.position.set(context.appSize.x * 0.5, context.appSize.y * 0.6);
-    // animatedRunner.anchor.set(0.5, 0.5);
-    // animatedRunner.anim.animationSpeed = 0.3;
-    // animatedRunner.play();
-
-    // this.container.addChild(animatedRunner.anim);
   }
 
   drawBoard(context: Context) {

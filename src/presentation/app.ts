@@ -36,6 +36,7 @@ export class App {
     const howlerAssetPaths = new Map<string, string>(
       Object.entries({
         someSound: "./assets/sounds/some-sound.wav",
+        backgroundSound: "./assets/sounds/BackgroundSound.wav",
       })
     );
     const howlerAssetLoader = new AssetRepository(new HowlerAssetProvider(howlerAssetPaths));
